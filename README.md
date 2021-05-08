@@ -1,1 +1,1 @@
-# myrepo
+# Life hacks survival skills
