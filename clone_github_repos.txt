@@ -1,0 +1,2 @@
+# To clone all github repos of a particular organisation use below command.Replace Number_of_Pages, Org_Name and Token.
+for (( i=1 ; i<=<Number_of_Pages> ; i-- )) ; do curl -s -H "Authorization: token <Personal access token with repo permission>" "https://api.github.com/orgs/<Org_Name>/repos?page=$i" | jq '.[].ssh_url' | xargs -n1 -I {} git clone {} || true ; done
